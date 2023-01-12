@@ -6,7 +6,7 @@ on:
 
 jobs:
   main:
-    name: Validate PR title
+    name: Help Command
     runs-on: ubuntu-latest
     steps:
       - name: Determine variables
@@ -17,8 +17,6 @@ jobs:
           RANDOM=$(date +%s)
           
           maintainer=${maintainers[ $RANDOM % ${#maintainers[@]} ]}
-
-          echo ${{ toJson(github) }}
           
           echo "maintainer=$maintainer" >> $GITHUB_OUTPUT
 
