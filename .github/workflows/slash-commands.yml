@@ -18,6 +18,8 @@ jobs:
           
           maintainer=${maintainers[ $RANDOM % ${#maintainers[@]} ]}
 
+          echo ${{ toJson(github) }}
+          
           echo "maintainer=$maintainer" >> $GITHUB_OUTPUT
 
       - name: Create comment
