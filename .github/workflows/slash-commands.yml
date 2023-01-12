@@ -12,7 +12,7 @@ jobs:
       - name: Determine variables
         id: vars
         run: |
-          maintainers=("xx-npalm-xx" "xx-kayman-mk-xx")
+          maintainers=("xx-maint1-xx" "xx-maint2-xx")
           
           RANDOM=$(date +%s)
           
