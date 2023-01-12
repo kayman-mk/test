@@ -1,0 +1,30 @@
+---
+on:
+  repository_dispatch:
+    types: 
+      - help-command
+
+jobs:
+  main:
+    name: Validate PR title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine variables
+        id: vars
+        run: |
+          maintainers=("xx-npalm-xx" "xx-kayman-mk-xx")
+          
+          RANDOM=$(date +%s)
+          
+          maintainer=${maintainers[ $RANDOM % ${#maintainers[@]} ]}
+
+          echo "maintainer=$maintainer" >> $GITHUB_OUTPUT
+
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
+          body: |
+            Hey there @${{ steps.vars.outputs.maintainer }}, could you please help @${{ github.event.client_payload.github.payload.comment.user.login }} out?
