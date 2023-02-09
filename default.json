@@ -1,0 +1,7 @@
+{
+  "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+  "includeForks": false,
+  "onboarding": false,
+  "platfromAutomerge": true,
+  "rebaseWhen": "behind-base-branch"
+}
