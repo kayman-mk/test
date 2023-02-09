@@ -2,6 +2,6 @@
   "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
   "includeForks": false,
   "onboarding": false,
-  "platfromAutomerge": true,
+  "platformAutomerge": true,
   "rebaseWhen": "behind-base-branch"
 }
