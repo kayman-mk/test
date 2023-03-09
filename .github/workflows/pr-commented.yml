@@ -6,6 +6,7 @@ on:
 
 permissions:
   actions: write
+  content: write
   pull-requests: write
 
 jobs:
