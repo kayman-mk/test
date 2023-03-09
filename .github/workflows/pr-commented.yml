@@ -5,7 +5,8 @@ on:
       - created
 
 permissions:
-  statuses: write
+  actions: write
+  contents: write
   pull-requests: write
 
 jobs:
