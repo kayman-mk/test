@@ -4,6 +4,9 @@ on:
     types:
       - created
 
+permissions:
+  pull-requests: write
+
 jobs:
   slashCommandDispatch:
     runs-on: ubuntu-latest
