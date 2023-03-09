@@ -6,6 +6,9 @@ on:
     types:
       - created
 
+permissions:
+  pull-requests: write
+  
 jobs:
   slash-command-dispatch:
     runs-on: ubuntu-latest
