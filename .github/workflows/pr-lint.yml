@@ -1,13 +1,15 @@
 name: "Lint PR title"
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - edited
       - synchronize
     branches-ignore:
       - 'release-please--branches--*'
+
+permissions: read-all
 
 jobs:
   main:
