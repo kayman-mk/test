@@ -3,5 +3,6 @@
   "includeForks": false,
   "onboarding": false,
   "platformAutomerge": true,
+  "a": "b",
   "rebaseWhen": "behind-base-branch"
 }
